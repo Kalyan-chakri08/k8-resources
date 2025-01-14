@@ -1,0 +1,60 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: nginx
+  # these labels are deployment related labels
+  labels:
+    app: nginx
+    purpose: deployment
+    tier: web
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: nginx
+      tier: web
+      project: test-project
+  # pod definition
+  template:
+    metadata:
+      labels:
+        app: nginx
+        tier: web
+        project: test-project
+        extra-key: extra-value
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx
+spec:
+  selector:
+    app: nginx
+    tier: web
+    project: test-project
+  ports:
+  - protocol: TCP
+    port: 80 #service-port
+    targetPort: 80 #target-port
+
+
+
+# This YAML configuration defines two Kubernetes resources: a Deployment and a Service for an Nginx application.
+
+# Deployment:
+
+# The Deployment creates and manages Nginx pods (replicas).
+# It specifies 5 replicas to be run.
+# It has labels for organizing and selecting the pods.
+# The pods run the nginx container image.
+
+# Service:
+
+# The Service exposes the Nginx pods within the cluster.
+# It selects pods based on matching labels (app: nginx, tier: web, and project: test-project).
+# It exposes the Nginx container on port 80 to access the service.
+# In summary, the Deployment ensures Nginx is running in 5 replicas, while the Service makes those instances accessible on port 80.
