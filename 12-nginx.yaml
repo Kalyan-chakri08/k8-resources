@@ -1,0 +1,18 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: nginx
+  labels:
+    name: frontend
+    project: expense
+    component: frontend
+    environment: dev
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+
+
+
+# This YAML file creates a Pod named nginx with an NGINX container. 
+# The Pod is labeled to indicate it belongs to the frontend component of a project called expense and is in the development environment.
