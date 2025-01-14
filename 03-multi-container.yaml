@@ -10,7 +10,9 @@ spec:
     image: "almalinux:9"
     command: ["sleep","2000"]
 
-# This configuration creates a Pod with two containers: one for the nginx web server and another for an Alma Linux container that stays alive for 2000 seconds. This setup demonstrates how multiple containers can be managed together in Kubernetes, sharing the same environment.
+# This configuration creates a Pod with two containers: 
+# one for the nginx web server and another for an Alma Linux container that stays alive for 2000 seconds. 
+# This setup demonstrates how multiple containers can be managed together in Kubernetes, sharing the same environment.
 
 
 
