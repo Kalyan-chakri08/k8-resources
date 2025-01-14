@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-lb
+spec:
+  type: LoadBalancer
+  selector:
+    name: frontend
+    project: expense
+    component: frontend
+    environment: dev
+  ports:
+  - protocol: TCP
+    port: 80 #service-port
+    targetPort: 80 #target-port
+    nodePort: 32761
+
+
+# apiVersion: v1: Specifies the version of the Kubernetes API.
+# kind: Service: This is a Service resource, which is used to expose applications running on pods.
+# metadata: The name of the service is nginx-lb.
+# spec:
+# type: LoadBalancer: This service is exposed to the external world using a load balancer, which distributes the incoming traffic across multiple pods.
+# selector: This ensures that the service targets pods with the labels name: frontend, project: expense, component: frontend, and environment: dev.
+# ports:
+# port: 80: The port the service listens on for incoming traffic.
+# targetPort: 80: The port on the pod that the traffic is forwarded to.
+# nodePort: 32761: The external port on the node that can be used to access the service.
+# this service makes the frontend of the expense project accessible to external users through a load balancer 
+# which distributes the incoming traffic across multiple pods on port 80. 
+# The traffic will be routed to the correct pods inside the Kubernetes cluster.
