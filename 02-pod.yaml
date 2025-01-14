@@ -8,3 +8,6 @@ spec:
     image: nginx:stable-otel
 
 # this YAML configuration tells Kubernetes to create a Pod with an Nginx container using a stable version of the Nginx image with OpenTelemetry integration.
+
+# spec section is where the containers running inside the Pod are defined, 
+# and the metadata section adds identifying information

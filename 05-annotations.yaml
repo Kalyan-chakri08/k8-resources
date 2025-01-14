@@ -6,9 +6,14 @@ metadata:
     course: k8
     trainer: sivakumar
   annotations:
-    kubernetes.io/created-by: 'sivakumar'
+    kubernetes.io/created-by: 'kalyan'
     jenkins.build.url: 'https://jenkins.daws78s.online/expense/job/backend/54'
 spec:
   containers:
   - name: nginx
     image: nginx
+
+
+# These annotations can be particularly useful for tracking and debugging purposes. 
+# While labels are used for grouping and selecting objects, 
+# annotations are more for attaching metadata or providing details without any particular function inside Kubernetes.
