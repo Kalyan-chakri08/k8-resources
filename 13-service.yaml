@@ -15,17 +15,17 @@ spec:
 
 
 
-apiVersion: v1: Specifies the Kubernetes API version.
-kind: Service: Indicates that this is a Service object.
-metadata: Contains the name of the Service, which is nginx.
-spec: Defines the specifications for the service:
-selector: Specifies the labels that identify the pods this service will route traffic to. The service will target pods with the labels:
-name: frontend
-project: expense
-component: frontend
-environment: dev
-ports: Defines the ports the service will expose. Here:
-port: The port on which the service will be exposed (80).
-targetPort: The port on the pod that the service should forward traffic to (80).
-In simpler terms, this YAML configures a service to route traffic on port 80 to pods with specific labels related to a "frontend" in a "dev" environment 
-for a project called "expense".
+# apiVersion: v1: Specifies the Kubernetes API version.
+# kind: Service: Indicates that this is a Service object.
+# metadata: Contains the name of the Service, which is nginx.
+# spec: Defines the specifications for the service:
+# selector: Specifies the labels that identify the pods this service will route traffic to. The service will target pods with the labels:
+# name: frontend
+# project: expense
+# component: frontend
+# environment: dev
+# ports: Defines the ports the service will expose. Here:
+# port: The port on which the service will be exposed (80).
+# targetPort: The port on the pod that the service should forward traffic to (80).
+# In simpler terms, this YAML configures a service to route traffic on port 80 to pods with specific labels related to a "frontend" in a "dev" environment 
+# for a project called "expense".
