@@ -28,4 +28,5 @@ The container gets its environment variables from the devops ConfigMap, making c
 
 envFrom: A keyword used to populate environment variables in a container from a ConfigMap or Secret.
 
-ConfigMap: The ConfigMap named devops contains key-value pairs (like course and trainer) that are used as environment variables in the container instead of hardcoding them.
+ConfigMap: The ConfigMap named devops contains key-value pairs (like course and trainer) 
+           that are used as environment variables in the container instead of hardcoding them.
