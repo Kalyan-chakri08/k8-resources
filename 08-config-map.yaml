@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: devops
+data:
+  course: "DevOps with AWS"
+  trainer: "kalyan"
+
+
+# This YAML file creates a ConfigMap named devops that holds configuration data for a course ("DevOps with AWS") and its trainer ("kalyan").
+
+# Think of ConfigMaps as a way to keep your configuration separate from your container images to manage your app’s settings more efficiently.
