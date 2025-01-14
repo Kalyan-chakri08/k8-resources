@@ -7,6 +7,14 @@ spec:
   - name: nginx
     image: nginx:stable-otel
 
+
+
+# kind: Pod: Specifies that this configuration is for a Pod, which is the smallest deployable unit in Kubernetes.
+# apiVersion: v1: Defines the API version of Kubernetes to use.
+# metadata: Contains information about the Pod, such as its name (labels) and labels (course: k8 and trainer: kalyan).
+# spec: Describes the specifications of the Pod, including:
+# containers: The Pod contains a container running the nginx image.
+
 # this YAML configuration tells Kubernetes to create a Pod with an Nginx container using a stable version of the Nginx image with OpenTelemetry integration.
 
 # spec section is where the containers running inside the Pod are defined, 
