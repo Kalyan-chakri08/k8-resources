@@ -1,0 +1,20 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: labels
+  labels:
+    course: k8
+    trainer: sivakumar
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+
+
+# This configuration is used to create a Pod with an Nginx container, and labels are applied to help organize and manage the Pod.
+
+
+
+
+
+
