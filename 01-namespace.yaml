@@ -1,0 +1,12 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: expense
+  labels:
+    name: expense
+    environment: dev
+
+
+# Namespaces help organize resources (like pods, services) into groups.
+# It keeps environments (e.g., dev, test, prod) separate and isolated.
+# The labels (e.g., environment: dev) add extra information for easier management.
